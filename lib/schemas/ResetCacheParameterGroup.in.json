@@ -1,0 +1,76 @@
+{
+    "type": "object",
+    "properties": {
+        "Action": {
+            "required": true,
+            "type": "string"
+        },
+        "Version": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "description": "Represents the input of a <code>ResetCacheParameterGroup</code> operation.",
+            "properties": {
+                "CacheParameterGroupName": {
+                    "description": "The name of the cache parameter group to reset.",
+                    "type": "string"
+                },
+                "ParameterNameValues": {
+                    "description": "An array of parameter names to reset to their default values. If <code>ResetAllParameters</code> is <code>true</code>, do not use <code>ParameterNameValues</code>. If <code>ResetAllParameters</code> is <code>false</code>, you must specify the name of at least one parameter to reset.",
+                    "items": {
+                        "description": "Describes a name-value pair that is used to update the value of a parameter.",
+                        "properties": {
+                            "ParameterName": {
+                                "description": "The name of the parameter.",
+                                "type": "string"
+                            },
+                            "ParameterValue": {
+                                "description": "The value of the parameter.",
+                                "type": "string"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "type": "array"
+                },
+                "ResetAllParameters": {
+                    "description": "<p>If <code>true</code>, all parameters in the cache parameter group are reset to their default values. If <code>false</code>, only the parameters listed by <code>ParameterNameValues</code> are reset to their default values.</p> <p>Valid values: <code>true</code> | <code>false</code> </p>",
+                    "type": "boolean"
+                }
+            },
+            "required": [
+                "CacheParameterGroupName"
+            ],
+            "type": "object"
+        },
+        "X_Amz_Content_Sha256": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Date": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Algorithm": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Credential": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Security_Token": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Signature": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_SignedHeaders": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

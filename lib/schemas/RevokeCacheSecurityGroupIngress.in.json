@@ -1,0 +1,64 @@
+{
+    "type": "object",
+    "properties": {
+        "Action": {
+            "required": true,
+            "type": "string"
+        },
+        "Version": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "description": "Represents the input of a <code>RevokeCacheSecurityGroupIngress</code> operation.",
+            "properties": {
+                "CacheSecurityGroupName": {
+                    "description": "The name of the cache security group to revoke ingress from.",
+                    "type": "string"
+                },
+                "EC2SecurityGroupName": {
+                    "description": "The name of the Amazon EC2 security group to revoke access from.",
+                    "type": "string"
+                },
+                "EC2SecurityGroupOwnerId": {
+                    "description": "The AWS account number of the Amazon EC2 security group owner. Note that this is not the same thing as an AWS access key ID - you must provide a valid AWS account number for this parameter.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "CacheSecurityGroupName",
+                "EC2SecurityGroupName",
+                "EC2SecurityGroupOwnerId"
+            ],
+            "type": "object"
+        },
+        "X_Amz_Content_Sha256": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Date": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Algorithm": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Credential": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Security_Token": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Signature": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_SignedHeaders": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

@@ -1,0 +1,73 @@
+{
+    "type": "object",
+    "properties": {
+        "Action": {
+            "required": true,
+            "type": "string"
+        },
+        "Version": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "description": "Represents the input of a <code>ModifyCacheParameterGroup</code> operation.",
+            "properties": {
+                "CacheParameterGroupName": {
+                    "description": "The name of the cache parameter group to modify.",
+                    "type": "string"
+                },
+                "ParameterNameValues": {
+                    "description": "An array of parameter names and values for the parameter update. You must supply at least one parameter name and value; subsequent arguments are optional. A maximum of 20 parameters may be modified per request.",
+                    "items": {
+                        "description": "Describes a name-value pair that is used to update the value of a parameter.",
+                        "properties": {
+                            "ParameterName": {
+                                "description": "The name of the parameter.",
+                                "type": "string"
+                            },
+                            "ParameterValue": {
+                                "description": "The value of the parameter.",
+                                "type": "string"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "type": "array"
+                }
+            },
+            "required": [
+                "CacheParameterGroupName",
+                "ParameterNameValues"
+            ],
+            "type": "object"
+        },
+        "X_Amz_Content_Sha256": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Date": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Algorithm": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Credential": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Security_Token": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Signature": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_SignedHeaders": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

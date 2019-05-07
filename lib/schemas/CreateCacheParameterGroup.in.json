@@ -1,0 +1,64 @@
+{
+    "type": "object",
+    "properties": {
+        "Action": {
+            "required": true,
+            "type": "string"
+        },
+        "Version": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "description": "Represents the input of a <code>CreateCacheParameterGroup</code> operation.",
+            "properties": {
+                "CacheParameterGroupFamily": {
+                    "description": "<p>The name of the cache parameter group family that the cache parameter group can be used with.</p> <p>Valid values are: <code>memcached1.4</code> | <code>redis2.6</code> | <code>redis2.8</code> | <code>redis3.2</code> | <code>redis4.0</code> </p>",
+                    "type": "string"
+                },
+                "CacheParameterGroupName": {
+                    "description": "A user-specified name for the cache parameter group.",
+                    "type": "string"
+                },
+                "Description": {
+                    "description": "A user-specified description for the cache parameter group.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "CacheParameterGroupName",
+                "CacheParameterGroupFamily",
+                "Description"
+            ],
+            "type": "object"
+        },
+        "X_Amz_Content_Sha256": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Date": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Algorithm": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Credential": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Security_Token": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Signature": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_SignedHeaders": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}
